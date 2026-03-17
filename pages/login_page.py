@@ -1,3 +1,4 @@
+import pytest
 from selenium.webdriver.common.by import By
 
 class LoginPage:
@@ -7,3 +8,7 @@ class LoginPage:
     def Login(self):
         self.driver.find_element(By.XPATH, "//input[@placeholder='Username']").send_keys("standard_user")
         self.driver.find_element(By.XPATH, "//input[@placeholder='Password']").send_keys("secret_sauce")
+        self.driver.find_element(By.XPATH, "//input[@id='login-button']").click()
+
+
+    
